@@ -1,0 +1,74 @@
+body{
+    background-color: black;
+    box-sizing: border-box;
+}
+.head
+{
+    background-color: black;
+    color: white;
+    margin: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.head h1{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+}
+.head input[type="text"]
+{
+    outline: none;
+    width: 100%;
+    margin-top:1%;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+.search_image{
+    width: 100%;
+    position: relative;
+   
+}
+#inputImage{
+    width: 100%;
+}
+.head #inputImage:focus{
+    
+border:2px solid red;
+}
+
+#icons
+{
+    color: red;
+    position:relative;
+    left: 90%;
+    right: 5%;
+    top:-43px;
+}
+/* media query  */
+
+
+#grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.img{
+    width: 350px;
+    height: 250px;
+ 
+    margin: 15px;
+    background-position: center;
+    background-size: cover;
+}
