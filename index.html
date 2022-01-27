@@ -30,7 +30,7 @@
             <h1>ImageSearch</h1>
             <i class="fas fa-search fa-3x" style="margin: 1px;"></i>
             <div class = "search_image">
-                 <input type="text" class="form-control" name="" id="inputImage" placeholder="Search An Image!"><i id="icons" class="fas fa-search fa-2x"  ></i> 
+                 <input type="text" class="form-control" name="" id="inputImage" placeholder="Search An Image!"><i id="icons" class="fas fa-search fa-2x" onclick="getImages()" ></i> 
             </div>
 
 
@@ -41,10 +41,13 @@
 
         <div class="container">
         <div id="grid">
-
+          
         </div>
+        <center>
+            <input type="button" value = "Next Page" id="nextPageBtn" onclick="newPage()" >
+        </center>
         </div>
-
+       
 
 
 
