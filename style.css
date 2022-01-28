@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: black;
     box-sizing: border-box;
@@ -6,8 +10,8 @@ body{
 {
     background-color: black;
     color: white;
-    margin: 1px;
-    padding: 10px;
+
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,8 +19,9 @@ body{
 }
 .head h1{
     font-family: 'Mochiy Pop P One', sans-serif;
-    margin: 10px;
-    font-size: 30px;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-size: 35px;
 }
 .head input[type="text"]
 {
@@ -53,7 +58,25 @@ border:2px solid red;
     right: 5%;
     top:-43px;
 }
+
+#icons:hover{
+    color:blue;
+}
 /* media query  */
+
+
+
+#downloadLabel{
+   text-align: center;
+    width: 100%;
+    color:white;
+    padding: 10px;
+    background-color: tomato;
+    font-weight: 700;
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
 
 
 #grid{
@@ -75,19 +98,36 @@ border:2px solid red;
 }
 
 #nextPageBtn{
+    width: 20%;
     padding: 10px;
     color: white;
-    background-color: brown;
+    background-color: tomato;
     font-weight: 600;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 40%;
+    justify-self:center ;
     font-size: 20px;
-    vertical-align:middle;
-    display: none;
     
-    margin-left: 6%;
+    display: none;
+  
 }
 
+.nextPage
+{
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#heartIcon{
+    color:pink;
+}
 /* Media Queries */
 @media(max-width: 1300px){
     #icons{
@@ -99,6 +139,12 @@ border:2px solid red;
     #icons{
         left: 85%;
     }
+    .head{
+        align-items: center;
+    }
+    .head h1{
+        justify-self: center;
+    }
 }
 
 @media(max-width: 480px)
@@ -106,4 +152,20 @@ border:2px solid red;
     #icons{
         left: 85%;
     }
+    .head{
+        align-items: center;
+    }
+    .head h1{
+        font-size: 30px;
+        margin-top: 2%;
+    }
+    .head #cameraIcon{
+        font-size: 35px;
+        margin-top: 2%;
+    }
+    #nextPageBtn{
+        width: 40%;
+        margin-left: 1%;
+    }
+
 }
