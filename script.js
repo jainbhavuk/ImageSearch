@@ -15,6 +15,7 @@ inputImage.addEventListener('keydown',(key)=>{
 
 function getImages()
 {
+    document.getElementById('grid').innerHTML="";
     imageName = inputImage.value;
  axios.get(`https://api.unsplash.com/search/photos?client_id=${myKey}&\page=1&query=${imageName}`).then((res)=>{
      console.log(res);
@@ -38,7 +39,7 @@ const loadImagesToUI = (results)=>{
     {
         let newDiv = document.createElement('div');
         newDiv.className="img";
-        newDiv.style.backgroundImage="url(" + results[i].urls.full +")";
+        newDiv.style.backgroundImage="url(" + results[i].urls.regular+")";
         newDiv.addEventListener('click',()=>{
             window.open(results[i].links.download, "_blank");
         })
