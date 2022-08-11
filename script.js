@@ -25,11 +25,8 @@ function getImages() {
     .get(
       `https://api.unsplash.com/search/photos?client_id=${myKey}&\page=1&query=${imageName}`
     )
-    .then((res) => {
-      console.log(res);
-      totalPages = res.data.total_pages;
-
-      loadImagesToUI(res.data.results, totalPages);
+    .then((res) => {      
+      loadImagesToUI(res.data.results);
       labelDisappear();
     });
 }
@@ -41,8 +38,6 @@ function getNewImages(pageNo) {
       `https://api.unsplash.com/search/photos?client_id=${myKey}&\page=${pageNo}&query=${imageName}`
     )
     .then((res) => {
-      console.log(res);
-
       loadImagesToUI(res.data.results);
     });
 }
@@ -56,10 +51,10 @@ const loadImagesToUI = (results) => {
     newDiv.addEventListener("click", () => {
       window.open(results[i].links.download, "_blank");
     });
-    console.log(newDiv);
+
     document.getElementById("grid").appendChild(newDiv);
   }
-  document.getElementById("nextPageBtn").style.display = "block";
+  document.getElementById("nextPageBtn").style.display = "inline-block";
 };
 
 //Displaying Next Page Button Function
